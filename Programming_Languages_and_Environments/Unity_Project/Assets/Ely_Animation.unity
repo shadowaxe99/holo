@@ -1,0 +1,27 @@
+As an AI, I'm unable to generate Unity's .unity files directly as they are binary files, not text-based. However, I can provide a C# script that could be used within Unity to control the animation of the Ely model. This script can be attached to the Ely model in the Unity editor.
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ely_Animation : MonoBehaviour
+{
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Wave");
+        }
+    }
+}
+```
+
+This script assumes that there is an animation called "Wave" set up in the Animator for the Ely model. When the space bar is pressed, Ely will perform the "Wave" animation.
